@@ -7,7 +7,7 @@ This set of codes is to download URLs form the internet when they are present in
 #Set working directory till the folder where you want to create new folders#
 setwd("/Users/jobinvarughese/Desktop/iiser/10th sem/regen paper/All veg collated/To be collated/photos/Subash2_total_w_regen/abv50")
 
-# Then create the folders. The files with foldername in their path will not download unless there is a folder with that name
+#Then create the folders. The files with foldername in their path will not download unless there is a folder with that name
 paths <- sub("/+$", "", do.call(file.path, endfoldernames)) #endfoldernames is a vector with all folder names
 dirs  <- sub("(.*)/.*", "\\1", paths)
 for (dir in unique(dirs)) dir.create(dir, showWarnings = FALSE, recursive = TRUE)
